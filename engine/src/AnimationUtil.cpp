@@ -15,6 +15,11 @@ namespace fury
 		float maxAngle = quality * MathUtil::DegreeToRadian(45);
 		std::vector<KeyFrame> tempFrames;
 
+        //the core idea here is this:
+        //there are A B C three keyframes
+        //and if the there aren't big engough change from A to B to C,
+        //then B can be skipped.
+        //The way to determine that is the famous vector dot produc
 		auto ProcessKeyFrames = [&](std::vector<KeyFrame> &keyframes)
 		{
 			unsigned int count = keyframes.size();

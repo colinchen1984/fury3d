@@ -19,6 +19,7 @@ namespace fury
 			tick(tick), x(x), y(y), z(z) {}
 	};
 
+    //channel are used on joint for mesh
 	struct AnimationChannel
 	{
 	public:
